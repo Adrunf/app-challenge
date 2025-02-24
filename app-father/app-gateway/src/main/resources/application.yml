@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: app-gateway
+
+  cloud:
+    gateway:
+      routes:
+        - id: person
+          uri: lb://APP-PERSON
+          predicates:
+            - Path=/person/**
+        - id:
+          uri: lb://APP-TRANSACTION
+          predicates:
+            - Path=/transaction/**
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true

@@ -1,0 +1,5 @@
+rootProject.name = 'app-transaction'
+include 'app-microservices-client'
+include 'app-microservices-core'
+include 'app-microservices-services'
+include 'app-microservices-vo'

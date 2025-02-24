@@ -1,0 +1,320 @@
+{
+	"info": {
+		"_postman_id": "61826316-ea0a-46be-9b4d-d3bc16e9f4a2",
+		"name": "Challenge Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7803477"
+	},
+	"item": [
+		{
+			"name": "Clientes - Customers",
+			"item": [
+				{
+					"name": "Search customers",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Add customers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Julio Perezzz\",\r\n    \"gender\": \"Hombre\",\r\n    \"age\": 30,\r\n    \"identification\": \"1006025499\",\r\n    \"address\": \"Av. TEST\",\r\n    \"phone\": \"0993214569\",\r\n    \"password\": \"1234\",\r\n    \"status\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/person/customers",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"person",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete customer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/person/customers/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"person",
+								"customers",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update customer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Julio Perez\",\r\n    \"gender\": \"Hombre\",\r\n    \"age\": 30,\r\n    \"identification\": \"1006025499\",\r\n    \"address\": \"Av. TEST\",\r\n    \"phone\": \"0993214569\",\r\n    \"password\": \"1234\",\r\n    \"status\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/person/customers/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"person",
+								"customers",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints para la creación, eliminación y actualización de clientes (Customers)."
+		},
+		{
+			"name": "Reportes - Reports",
+			"item": [
+				{
+					"name": "JSON Report",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"description": "Carpeta con los endpoints para la generación de reportes"
+		},
+		{
+			"name": "Cuentas - Accounts",
+			"item": [
+				{
+					"name": "Search accounts",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Add Acount",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountNumber\": \"156468478\",\r\n    \"accountType\": \"Ahorros\",\r\n    \"initialBalance\": 200,\r\n    \"status\": 1,\r\n    \"customerId\": \"2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/transaction/account",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"transaction",
+								"account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete account",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/transaction/account/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"transaction",
+								"account",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update account",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountNumber\": \"68484684\",\r\n    \"accountType\": \"Ahorros\",\r\n    \"initialBalance\": 200,\r\n    \"status\": 1,\r\n    \"customerId\": \"2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/transaction/account/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"transaction",
+								"account",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints para la creación, eliminación y actualización de cuentas (Accounts)."
+		},
+		{
+			"name": "Transactions - transacciones",
+			"item": [
+				{
+					"name": "Add transaction",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"date\": \"2024-07-10T10:00:00\",\n    //\"transactionType\": \"Deposito\",\n    \"transactionType\": \"Retiro\",\n    \"amount\": 150000,\n    \"accountId\": 7,\n    \"status\": \"Activo\"\n}\n"
+						},
+						"url": {
+							"raw": "localhost:8082/procedure/transaction/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"procedure",
+								"transaction",
+								"create"
+							]
+						},
+						"description": "Creates a collection using the [Postman Collection v2 schema format](https://schema.postman.com/json/collection/v2.1.0/docs/index.html). Include a `collection` object in the request body that contains the following required properties:\n\n*   `info` — An **object** that contains the following properties:\n    *   `name` — A **string** value that contains the collection's name.\n    *   `schema` — A **string** that contains a URL to the collection's schema. For example, the `https://schema.getpostman.com/collection/v1` URL.\n*   `item` — An **object** that contains the HTTP request and response information.\n    *   `request` — An **object** that contains the collection's request information. For a complete list of values, refer to the `definitions.request` entry in the [collection.json schema file](https://schema.postman.com/json/collection/v2.1.0/collection.json). If you pass an empty object for this value, the system defaults to an untitled GET request.\n\n**Note:**\n\n*   For a complete list of available property values for this endpoint, use the following references available in the [collection.json schema file](https://schema.postman.com/json/collection/v2.1.0/collection.json):\n    *   `info` object — Use the `definitions.info` entry.\n    *   `item` object — Use the `definitions.items` entry.\n*   For all other possible values, refer to the [collection.json schema file](https://schema.postman.com/json/collection/v2.1.0/collection.json)."
+					},
+					"response": []
+				},
+				{
+					"name": "Search transaction",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Update transaction",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"transactionType\": \"Retiro\",\r\n    \"amount\": 50,\r\n    \"accountId\": 1,\r\n    \"status\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/transaction/transaction/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"transaction",
+								"transaction",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete transaction",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/transaction/transaction/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"transaction",
+								"transaction",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints para la creación, eliminación y actualización de transacciones (Transactions)."
+		}
+	]
+}

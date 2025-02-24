@@ -1,0 +1,34 @@
+apply from: "../container-dependencies/plugins.gradle"
+
+ext {
+	baseVersion = '0.0.1-SNAPSHOT'
+}
+
+buildscript {
+
+	apply from: "../container-dependencies/repositories.gradle"
+
+	repositories repos
+
+	apply from: "../container-dependencies/plugins.gradle"
+
+	dependencies {
+		classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootPluginVersion}"
+		classpath "io.spring.gradle:dependency-management-plugin:${dependenciesManagementPluginVersion}"
+	}
+}
+
+subprojects {
+	apply from: "../../container-dependencies/projects.gradle"
+
+	repositories repos
+
+	dependencyManagement {
+		apply from: '../../container-dependencies/dependencies.gradle'
+	}
+}
+
+allprojects {
+	group = 'com.ec.app'
+	version = "${baseVersion}"
+}

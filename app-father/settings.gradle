@@ -1,0 +1,3 @@
+rootProject.name = 'app-father'
+
+include 'app-gateway', 'app-eureka'

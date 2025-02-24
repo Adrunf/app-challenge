@@ -1,0 +1,4 @@
+ext {
+    springBootPluginVersion = '2.7.4'
+    dependenciesManagementPluginVersion = '1.0.14.RELEASE'
+}
