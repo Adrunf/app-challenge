@@ -24,8 +24,7 @@ import java.util.Map;
 /**
  * Service for common report resources
  *
- * @author daleonv
- * @version 1.0
+ * @author arobayo
  */
 @Lazy
 @Service
