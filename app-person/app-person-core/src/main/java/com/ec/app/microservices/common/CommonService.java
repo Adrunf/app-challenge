@@ -58,24 +58,4 @@ public class CommonService implements ICommonService {
             throw new RuntimeException("Error generating report", e);
         }
     }
-
-    private byte[] exportReport(JasperPrint print, String extension) throws JRException {
-        switch (extension) {
-            case "pdf":
-                return JasperExportManager.exportReportToPdf(print);
-            case "xlsx":
-                ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-                JRXlsxExporter exporter = new JRXlsxExporter();
-                exporter.setExporterInput(new SimpleExporterInput(print));
-                exporter.setExporterOutput(new SimpleOutputStreamExporterOutput(byteArrayOutputStream));
-                SimpleXlsxReportConfiguration configuration = new SimpleXlsxReportConfiguration();
-                configuration.setDetectCellType(true);
-                configuration.setCollapseRowSpan(false);
-                exporter.setConfiguration(configuration);
-                exporter.exportReport();
-                return byteArrayOutputStream.toByteArray();
-            default:
-                throw new RuntimeException("Unknown report format: " + extension);
-        }
-    }
 }

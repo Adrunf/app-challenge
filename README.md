@@ -1,6 +1,6 @@
 # Proyecto de Microservicios para Manejo de Transacciones
 
-Este proyecto implementa una arquitectura basada en microservicios utilizando **Spring Boot**, con **Eureka** para el descubrimiento de servicios y **Spring Cloud Gateway** para la gestión del enrutamiento.
+Este proyecto implementa una arquitectura basada en microservicios utilizando **Spring Boot**, con **Eureka** para el exposición de servicios y **Spring Cloud Gateway** para la gestión del enrutamiento.
 
 ## 🚀 Arquitectura del Proyecto
 
